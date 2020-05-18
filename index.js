@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const separator = Symbol('separator');
 
@@ -54,10 +54,12 @@ const create = (input, options = {}, menuLevel = 0) => {
 	}).join('\n');
 };
 
-module.exports = (input, options) => {
+export default (input, options) => {
 	console.log(create(input, options));
 };
 
-module.exports.separator = separator;
-module.exports.darkMode = process.env.BitBarDarkMode === '1';
-module.exports.create = create;
+export {
+  separator,
+  //darkMode: process.env.BitBarDarkMode === '1',
+  create
+};
