@@ -54,11 +54,14 @@ const create = (input, options = {}, menuLevel = 0) => {
 	}).join('\n');
 };
 
-export default (input, options) => {
+const _default = (input, options) => {
 	console.log(create(input, options));
 };
 
+export default _default;
+
 export {
+  default:_default,
   separator,
   //darkMode: process.env.BitBarDarkMode === '1',
   create
